@@ -1,0 +1,2 @@
+http\://www.nan-remoting.com/schema/nan-service=com.linuer.nan.springsupport.NanRemoteServiceNamespaceHandler
+http\://www.nan-remoting.com/schema/nan-reference=com.linuer.nan.springsupport.NanRemoteReferenceNamespaceHandler

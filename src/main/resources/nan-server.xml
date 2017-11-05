@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:NanServer="http://www.nan-remoting.com/schema/nan-service"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.nan-remoting.com/schema/nan-service http://www.nan-remoting.com/schema/nan-service.xsd">
+
+    <!-- 发布远程服务 -->
+    <bean id="helloService" class="com.linuer.test.HelloServiceImpl"/>
+    <NanServer:service id="helloServiceRegister"
+                        interface="com.linuer.test.HelloService"
+                        ref="helloService"
+                        groupName="default"
+                        weight="2"
+                        appKey="nan"
+                        workerThreads="100"
+                        serverPort="8081"
+                        timeout="600"/>
+</beans>
